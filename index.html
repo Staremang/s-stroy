@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="http://xn----7sbbf7buapmcaf3m.xn--p1ai/bitrix/js/main/core/css/core.css?15754703913963" />
-  <link rel="stylesheet" href="http://xn----7sbbf7buapmcaf3m.xn--p1ai/frontend/styles/swiper.min.css?157547038519778" />
-  <link rel="stylesheet" href="http://xn----7sbbf7buapmcaf3m.xn--p1ai/local/templates/saxes/css/jquery.fancybox.min.css?157547040812795" />
-  <link rel="stylesheet" href="http://xn----7sbbf7buapmcaf3m.xn--p1ai/frontend/styles/main.css?1583409127408723" />
-  <link rel="stylesheet" href="http://xn----7sbbf7buapmcaf3m.xn--p1ai/local/templates/saxes/css/styles.overwrite.css?15786389393472" />
+  <link rel="stylesheet" href="https://xn----7sbbf7buapmcaf3m.xn--p1ai/bitrix/js/main/core/css/core.css?15754703913963" />
+  <link rel="stylesheet" href="https://xn----7sbbf7buapmcaf3m.xn--p1ai/frontend/styles/swiper.min.css?157547038519778" />
+  <link rel="stylesheet" href="https://xn----7sbbf7buapmcaf3m.xn--p1ai/local/templates/saxes/css/jquery.fancybox.min.css?157547040812795" />
+  <link rel="stylesheet" href="https://xn----7sbbf7buapmcaf3m.xn--p1ai/frontend/styles/main.css?1583409127408723" />
+  <link rel="stylesheet" href="https://xn----7sbbf7buapmcaf3m.xn--p1ai/local/templates/saxes/css/styles.overwrite.css?15786389393472" />
 
   <title>Контакты компании "Саксес" в Нижнем Новгороде</title>
   <link rel="stylesheet" href="style.css">
@@ -53,8 +53,7 @@
             </button>
           </div>
         </form>
-
-        <!--<input name="s" type="submit" value="">-->          </nav>
+      </nav>
     </div>
   </div>
 
@@ -315,39 +314,6 @@
         </div>
       </div>
     </div>
-    <script>
-    //$('.site-header__middle-cities-item-text').on('click', function () {
-    $('.site-header__middle-cities-item').on('click', function() {
-
-      var idCity = $(this).find('.site-header__middle-cities-item-text').attr('idCity');
-      $('.site-header__middle-cities-item').removeClass('active');
-      $(this).addClass('active');
-      //console.log(idCity);
-
-      $.ajax({
-        type: 'POST',
-        url: '/ajax/city_checkout.php',
-        data: ({
-          'idCity': idCity,
-        }),
-        success: function(res) {
-          // location.reload();
-          res = JSON.parse(res);
-          // console.log(res);
-          if (res.domain) {
-            window.location = 'https://' + res.domain + '.ворота-саксэс.рф/contacts/';
-          } else {
-            window.location = 'https://ворота-саксэс.рф/contacts/?c=' + res.city;
-          }
-        },
-      });
-    });
-    $('.site-header__middle-help').on('click', function(e) {
-
-      window.location = 'https://ворота-саксэс.рф/contacts/';
-    });
-    </script>
-
 
     <div class="site-header__mobile-bottom">
       <div class="container">
